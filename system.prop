@@ -16,7 +16,6 @@ audio.offload.gapless.enabled=true
 mm.enable.smoothstreaming=true
 audio.offload.buffer.size.kb=1024
 audio.dolby.ds2.enabled=true
-audio.dolby.ds2.hardbypass=true
 audio.offload.passthrough=false
 persist.dpm.feature=1
 tunnel.audio.encode=false
@@ -138,3 +137,9 @@ persist.timed.enable=true
 
 # Wifi
 persist.data.iwlan.enable=true
+
+#enable property for hard bypass
+audio.dolby.ds2.hardbypass=true
+
+# Create zram disk
+ro.config.zram=true

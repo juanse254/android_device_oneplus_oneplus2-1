@@ -86,6 +86,7 @@
     <bool name="config_intrusiveBatteryLed">true</bool>
 
     <!-- Button illumination -->
+    <add-resource type="bool" name="config_deviceHasVariableButtonBrightness"></add-resource>
     <bool name="config_deviceHasVariableButtonBrightness">true</bool>
 
     <!-- Vibrator pattern for feedback about a long screen/key press -->

@@ -54,11 +54,9 @@ TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv7-a-neon
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := cortex-a53
+TARGET_2ND_CPU_VARIANT := cortex-a53.a57
 
 TARGET_USES_64_BIT_BINDER := true
-
-BOARD_GLOBAL_CFLAGS += -DUSE_RIL_VERSION_11 -DCOMPAT_SENSORS_M
 
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 boot_cpus=0-3 androidboot.selinux=permissive
@@ -158,15 +156,12 @@ TARGET_PROVIDES_LIBLIGHT := true
 
 # RIL
 TARGET_RIL_VARIANT := caf
-BOARD_GLOBAL_CFLAGS += -DUSE_RIL_VERSION_11
 
 # RPC
 TARGET_NO_RPC := true
 
 # Sensors
 USE_SENSOR_MULTI_HAL := true
-BOARD_GLOBAL_CFLAGS += -DCOMPAT_SENSORS_M
-TARGET_PREFERS_AOSP_ROTATION_SENSOR := true
 
 # Enable dexpreopt to speed boot time
 ifeq ($(HOST_OS),linux)
@@ -223,4 +218,4 @@ BOARD_HARDWARE_CLASS += $(PLATFORM_PATH)/cmhw
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 
 # inherit from the proprietary version
--include vendor/oneplus/oneplus2/BoardConfigVendor.mk
+#-include vendor/oneplus/oneplus2/BoardConfigVendor.mk

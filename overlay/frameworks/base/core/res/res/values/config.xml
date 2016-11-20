@@ -422,4 +422,12 @@
         <item>"/system/framework/arm64/boot-core-libart.oat"</item>
    </string-array>
 
+<!-- Whether to intercept inputs on screen off. -->
+    <add-resource type="bool" name="config_enableKeyHandler"></add-resource>
+    <bool name="config_enableKeyHandler">true</bool>
+
+    <!-- Whether device has physical tri state switch -->
+    <add-resource type="bool" name="config_hasAlertSlider"></add-resource>
+    <bool name="config_hasAlertSlider">true</bool>
+
 </resources>

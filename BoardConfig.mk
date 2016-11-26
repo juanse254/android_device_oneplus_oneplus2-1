@@ -57,6 +57,7 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
 
 TARGET_USES_64_BIT_BINDER := true
+TARGET_CPU_CORTEX_A53 := true
 
 BOARD_GLOBAL_CFLAGS += -DUSE_RIL_VERSION_11 -DCOMPAT_SENSORS_M
 
@@ -122,6 +123,8 @@ BOARD_USES_QCNE := true
 # Cpusets
 ENABLE_CPUSETS := true
 
+BOARD_EGL_CFG := $(PLATFORM_PATH)/egl.cfg
+
 # GPS
 TARGET_NO_RPC := true
 USE_DEVICE_SPECIFIC_GPS := true
@@ -156,6 +159,9 @@ TARGET_PROVIDES_KEYMASTER := true
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
+# Added to indicate that protobuf-c is supported in this build
+PROTOBUF_SUPPORTED := false
+
 # RIL
 TARGET_RIL_VARIANT := caf
 BOARD_GLOBAL_CFLAGS += -DUSE_RIL_VERSION_11
@@ -167,6 +173,7 @@ TARGET_NO_RPC := true
 USE_SENSOR_MULTI_HAL := true
 BOARD_GLOBAL_CFLAGS += -DCOMPAT_SENSORS_M
 TARGET_PREFERS_AOSP_ROTATION_SENSOR := true
+TARGET_USES_IMS := true 
 
 # Enable dexpreopt to speed boot time
 ifeq ($(HOST_OS),linux)

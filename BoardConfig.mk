@@ -20,9 +20,6 @@
 # definition file).
 #
 
-# Inherit from oppo-common
-#-include device/oppo/common/BoardConfigCommon.mk
-
 TARGET_OTA_ASSERT_DEVICE := OnePlus2,oneplus2
 
 PLATFORM_PATH := device/oneplus/oneplus2
@@ -62,7 +59,7 @@ TARGET_CPU_CORTEX_A53 := true
 BOARD_GLOBAL_CFLAGS += -DUSE_RIL_VERSION_11 -DCOMPAT_SENSORS_M
 
 # Kernel
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 boot_cpus=0-3
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 boot_cpus=0-3 androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
@@ -151,7 +148,6 @@ TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_oneplus2
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
-TARGET_LIBINIT_DEFINES_FILE := $(PLATFORM_PATH)/init/init_oneplus2.cpp
 
 # Keystore
 TARGET_PROVIDES_KEYMASTER := true
@@ -173,7 +169,7 @@ TARGET_NO_RPC := true
 USE_SENSOR_MULTI_HAL := true
 BOARD_GLOBAL_CFLAGS += -DCOMPAT_SENSORS_M
 TARGET_PREFERS_AOSP_ROTATION_SENSOR := true
-TARGET_USES_IMS := true 
+TARGET_USES_IMS := true
 
 # Enable dexpreopt to speed boot time
 ifeq ($(HOST_OS),linux)

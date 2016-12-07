@@ -126,6 +126,9 @@ PRODUCT_PACKAGES += \
 # Doze mode
 PRODUCT_PACKAGES += \
     OneplusDoze
+    
+#Android EGL implementation
+PRODUCT_PACKAGES += libGLES_android
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
@@ -142,8 +145,8 @@ PRODUCT_PACKAGES += \
     fs_config_files
 
 # Gello
-PRODUCT_PACKAGES += \
-    Gello
+#PRODUCT_PACKAGES += \
+#    Gello
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -217,6 +220,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     power.msm8994
 
+# QCOM 
+TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
+
+# Enable features in video HAL that can compile only on this platform
+TARGET_USES_MEDIA_EXTENSIONS := true
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.qcom.bt.sh \
@@ -234,10 +243,14 @@ PRODUCT_PACKAGES += \
 # RIL
 PRODUCT_PACKAGES += \
     librmnetctl \
-    libxml2
+    libxml2 \
+    libprotobuf-cpp-full
 
-PRODUCT_PACKAGES += telephony-ext
+PRODUCT_BOOT_JARS += tcmiface
+# This jar is needed for MSIM manual provisioning and for other
+# telephony related functionalities to work.
 PRODUCT_BOOT_JARS += telephony-ext
+PRODUCT_PACKAGES += telephony-ext
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -282,3 +295,6 @@ PRODUCT_COPY_FILES += \
 
 # Inherit from oppo-common
 $(call inherit-product, device/oppo/common/common.mk)
+
+# Inherit from oneplus-common
+$(call inherit-product, device/oneplus/common/common.mk)

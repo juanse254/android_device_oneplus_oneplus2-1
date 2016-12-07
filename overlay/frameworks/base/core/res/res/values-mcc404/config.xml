@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /*
-** Copyright 2014, The Android Open Source Project
+** Copyright 2015, The CyanogenMod Project
 **
 ** Licensed under the Apache License, Version 2.0 (the "License");
 ** you may not use this file except in compliance with the License.
@@ -17,12 +17,9 @@
 */
 -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_height="match_parent"
-              android:layout_width="match_parent">
-
-    <include layout="@layout/switch_bar" />
-
-</LinearLayout>
-
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Configuration that determines if ACTIVATE_REJECT_GGSN is to be treated as
+         a permanent error -->
+    <add-resource type="bool" name="config_reject_ggsn_perm_failure"></add-resource>
+    <bool name="config_reject_ggsn_perm_failure">false</bool>
+</resources>

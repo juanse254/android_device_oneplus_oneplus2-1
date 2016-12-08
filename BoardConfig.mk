@@ -231,6 +231,3 @@ BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 1
 
 # inherit from OnePlus common
 -include device/oneplus/common/BoardConfigCommon.mk
-
-# inherit from the proprietary version
--include vendor/oneplus/oneplus2/BoardConfigVendor.mk

@@ -251,3 +251,6 @@ BOARD_HARDWARE_CLASS += $(PLATFORM_PATH)/cmhw
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 
 BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 1
+
+# inherit from the proprietary version
+-include vendor/oneplus/oneplus2/BoardConfigVendor.mk

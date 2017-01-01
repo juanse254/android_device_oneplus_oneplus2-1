@@ -13,7 +13,7 @@
   },
   {
     "remote":      "github",
-    "repository":  "CyanogenMod/android_packages_resources_devicesettings",
+    "repository":  "LineageOS/android_packages_resources_devicesettings",
     "target_path": "packages/resources/devicesettings",
     "revision":    "cm-14.1"
   },

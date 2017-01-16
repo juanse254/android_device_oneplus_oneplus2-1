@@ -67,7 +67,7 @@ TARGET_KERNEL_APPEND_DTB := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/oneplus/msm8994
-TARGET_KERNEL_CONFIG := cm_oneplus2_defconfig
+TARGET_KERNEL_CONFIG := oneplus2_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
 # QCOM hardware
@@ -228,8 +228,7 @@ BOARD_USES_QC_TIME_SERVICES := true
 # CM Hardware
 BOARD_HARDWARE_CLASS += $(PLATFORM_PATH)/cmhw
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
+TARGET_GESTURES_NODE := "/proc/touchpanel/gesture_enable"
 
 BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 1
 
-# inherit from OnePlus common
--include device/oneplus/common/BoardConfigCommon.mk

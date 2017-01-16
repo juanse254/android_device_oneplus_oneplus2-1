@@ -101,10 +101,11 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-		camera.msm8994 \
-		mm-qcamera-app \
-		libmm-qcamera \
-		sensors.hal.tof
+	camera.msm8994 \
+	mm-qcamera-app \
+	libmm-qcamera \
+	sensors.hal.tof\
+    OnePlusCamera
 
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \

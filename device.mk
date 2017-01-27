@@ -99,6 +99,14 @@ PRODUCT_PACKAGES += \
     com.dsi.ant.antradio_library \
     libantradio
 
+# Reduce client buffer size for fast audio output tracks
+PRODUCT_PROPERTY_OVERRIDES += \
+    af.fast_track_multiplier=1
+
+# Low latency audio buffer size in frames
+PRODUCT_PROPERTY_OVERRIDES += \
+    audio_hal.period_size=192
+
 # Camera
 PRODUCT_PACKAGES += \
 	camera.msm8994 \
@@ -177,10 +185,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     lights.msm8994
 
-# LiveDisplay native
-PRODUCT_PACKAGES += \
-    libjni_livedisplay
-
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
@@ -224,8 +228,7 @@ TARGET_USES_MEDIA_EXTENSIONS := true
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    init.qcom.bt.sh \
-    init.zram.sh
+    init.qcom.bt.sh
 
 PRODUCT_PACKAGES += \
     fstab.qcom \
@@ -241,12 +244,6 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libxml2 \
     libprotobuf-cpp-full
-
-PRODUCT_BOOT_JARS += tcmiface
-# This jar is needed for MSIM manual provisioning and for other
-# telephony related functionalities to work.
-PRODUCT_BOOT_JARS += telephony-ext
-PRODUCT_PACKAGES += telephony-ext
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -270,9 +267,6 @@ PRODUCT_COPY_FILES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    ipacm \
-    ipacm-diag \
-    IPACM_cfg.xml \
     hostapd \
     libwpa_client \
     wpa_supplicant \

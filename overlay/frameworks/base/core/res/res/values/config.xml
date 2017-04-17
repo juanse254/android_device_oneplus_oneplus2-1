@@ -408,4 +408,6 @@
     <add-resource type="bool" name="config_proximityCheckOnWakeEnabledByDefault"></add-resource>
     <bool name="config_proximityCheckOnWakeEnabledByDefault">true</bool>
 
+    <!-- Whether notify fingerprint client of successful cancelled authentication -->
+    <bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool>
 </resources>

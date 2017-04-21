@@ -154,8 +154,6 @@ PRODUCT_PACKAGES += fs_config_files
 
 # For libandroid
 PRODUCT_PACKAGES += libandroid
-# Gello
-PRODUCT_PACKAGES += Gello
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -180,6 +178,9 @@ PRODUCT_COPY_FILES += \
 # IRSC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
+
+# Jelly
+PRODUCT_PACKAGES += Jelly
 
 # Keylayouts
 PRODUCT_COPY_FILES += \

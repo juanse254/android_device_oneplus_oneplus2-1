@@ -116,7 +116,7 @@ PRODUCT_PACKAGES += \
     libshim_camera \
     libshim_ims-camera \
     sensors.hal.tof \
-    Snap
+    SnapdragonCamera
 
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
@@ -154,8 +154,7 @@ PRODUCT_PACKAGES += fs_config_files
 
 # For libandroid
 PRODUCT_PACKAGES += libandroid
-# Gello
-PRODUCT_PACKAGES += Gello
+
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -286,5 +285,3 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:system/etc/wifi/WCNSS_cfg.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini
 
-# Inherit from oppo-common
-$(call inherit-product, device/oppo/common/common.mk)
